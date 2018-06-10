@@ -25,13 +25,61 @@ public class PracticeUdacity {
 		
 	}
 	
+	public static int deposit(double value){
+		int i = 0;
+		while (value < 1000000.0 ){
+			value = value * 1.5;
+			i++ ;
+			}
+		return i;
+	}
+	
+	public static void inReverse (String [] stringArray){
+		
+		int size=stringArray.length;
+		
+		for (int i = size-1; i>=0; i--){
+			
+			System.out.println(stringArray[i]);
+		}
+	}
+	public int inRange ( int [] intString){
+		
+		int size=intString.length;
+		int min=intString[0];
+		int max = intString[0];
+		if (size==0){
+			return -1;
+		}
+		
+		for (int i=0; i<size; i++){
+			
+			if (intString[i]>max){
+				max= intString[i];
+			}
+			if (intString[i]<min){
+				min = intString[i];
+			}
+			
+		}
+			
+		return max-min;
+	}
+		
+	
 	public static void main(String[] args) {
 		
 		//factorial(10);
 		
-		String [] sentence= {"hi", "how", "are", "you"};
+		//String [] sentence= {"hi", "how", "are", "you"};
 		
-		System.out.println("Index target: "+checkArray(sentence, "are"));
+		//System.out.println("Index target: "+checkArray(sentence, "are"));
+		
+		//System.out.println(deposit (1000000.0));
+		
+		String [] stringArray = {"hi", "how", "are", "you"};
+		
+		inReverse(stringArray);
 	}
 
 }
